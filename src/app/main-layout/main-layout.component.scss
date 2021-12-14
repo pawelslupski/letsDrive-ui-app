@@ -1,0 +1,10 @@
+.aside {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  background: lightgray;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
