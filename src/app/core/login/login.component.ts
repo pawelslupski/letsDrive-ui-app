@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 import {Router} from "@angular/router";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {AuthService} from "../services/auth-service";
@@ -18,7 +18,7 @@ export class LoginComponent {
               private toast: MatSnackBar,
               private authService: AuthService) {}
 
-  login() {
+  public login(): void {
     this.authService.login(this.credentials)
       .then(() => this.router.navigate(['/dashboard']))
       .catch(error => this.toast.open(error.message, '', {panelClass: 'toast-error'}));
