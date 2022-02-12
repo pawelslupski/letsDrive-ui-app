@@ -23,8 +23,7 @@ export class LoginComponent {
   public login(): void {
     this.authService.login(this.credentials)
       .then(() => {
-        this.layoutService.showMainLayout();
-        this.router.navigate(['/main/dashboard'])
+        this.router.navigate(['/main/dashboard']).then(() => this.layoutService.showMainLayout());
       })
       .catch(error => this.toast.open(error.message, '', {panelClass: 'toast-error'}));
   }

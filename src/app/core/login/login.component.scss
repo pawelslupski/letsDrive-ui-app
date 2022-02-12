@@ -1,10 +1,12 @@
+@import './src/styles/variables';
+
 .login-container {
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(45deg, #3BFF5F, #0C4D61 20%, #000);
-  background: -webkit-linear-gradient(#fff, #000);
-  background: -o-linear-gradient(#fff, #000);
-  background: -moz-linear-gradient(#fff, #000);
+  background: linear-gradient(45deg, $ps-light-green, $ps-dark-green 20%, $ps-black);
+  background: -webkit-linear-gradient($ps-white, $ps-black);
+  background: -o-linear-gradient($ps-white, $ps-black);
+  background: -moz-linear-gradient($ps-white, $ps-black);
   display: flex;
   justify-content: center;
 }
@@ -22,12 +24,12 @@
 
   h3 {
     text-align: center;
-    color: white;
+    color: $ps-white;
     font-size: 25px;
   }
 
   p {
-    color: white;
+    color: $ps-white;
     font-size: 16px;
   }
 
@@ -42,7 +44,7 @@
   &-field {
     display: block;
     width: 320px;
-    color: white;
+    color: $ps-white;
     font-size: 16px;
   }
 }

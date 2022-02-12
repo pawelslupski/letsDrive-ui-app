@@ -1,13 +1,15 @@
+@import './src/styles/variables';
+
 .main {
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(45deg, #0c5e61, #041541);
+  background-color: $ps-dark-blue;
 }
 
 .toolbar {
-  height: 55px;
-  background: black;
-  color: white;
+  height: 50px;
+  background: $ps-dark-blue;
+  color: $ps-white;
 }
 
 .toolbar > .container {
@@ -16,7 +18,7 @@
 }
 
 .logout-icon {
-  font-size: 35px;
+  font-size: 30px;
 }
 
 .user-login {

@@ -1,23 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "styles/variables";
+@import "styles/_variables";
 
+// Bootstrap
 // Import functions, variables, and mixins needed by other Bootstrap files
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
-
 // Import Bootstrap Reboot
 @import "~bootstrap/scss/root"; // Contains :root CSS variables used by other Bootstrap files
 @import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/containers";
 
-@import "~bootstrap/scss/containers"; // Add .container and .container-fluid classes
-@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/utilities/api";
 
 @import "styles/reset";
 
 // Angular material
-
 // Toasts
 .toast-success {
   background: #0fdb00;
