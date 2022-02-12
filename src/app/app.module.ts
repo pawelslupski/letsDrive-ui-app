@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
@@ -9,6 +9,9 @@ import {AngularFireModule} from "@angular/fire/compat";
 import {environment} from "../environments/environment";
 import {CoreModule} from "./core/core.module";
 import {AngularFireAuthModule} from "@angular/fire/compat/auth";
+import {CoreRoutingModule} from "./core/core-routing.module";
+import {SharedModule} from "./shared/shared.module";
+import {LayoutService} from "./shared/services/layout.service";
 
 @NgModule({
   declarations: [
@@ -20,10 +23,15 @@ import {AngularFireAuthModule} from "@angular/fire/compat/auth";
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AppRoutingModule,
+    CoreRoutingModule,
     MaterialModule,
-    CoreModule
+    CoreModule,
+    SharedModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [LayoutService],
+  bootstrap: [AppComponent],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ]
 })
 export class AppModule { }

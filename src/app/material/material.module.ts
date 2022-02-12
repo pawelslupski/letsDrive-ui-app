@@ -9,6 +9,7 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
 import {MatSelectModule} from "@angular/material/select";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatInputModule} from "@angular/material/input";
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 const MATERIAL_MODULES = [
   MatIconModule,
@@ -20,7 +21,8 @@ const MATERIAL_MODULES = [
   MatSnackBarModule,
   MatCheckboxModule,
   MatSelectModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatSidenavModule
 ];
 
 @NgModule({

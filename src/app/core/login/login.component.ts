@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {Router} from "@angular/router";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {AuthService} from "../services/auth-service";
+import {LayoutService} from "../../shared/services/layout.service";
 
 @Component({
   selector: 'app-login',
@@ -16,11 +17,15 @@ export class LoginComponent {
 
   constructor(private router: Router,
               private toast: MatSnackBar,
-              private authService: AuthService) {}
+              private authService: AuthService,
+              private layoutService: LayoutService) {}
 
   public login(): void {
     this.authService.login(this.credentials)
-      .then(() => this.router.navigate(['/dashboard']))
+      .then(() => {
+        this.layoutService.showMainLayout();
+        this.router.navigate(['/main/dashboard'])
+      })
       .catch(error => this.toast.open(error.message, '', {panelClass: 'toast-error'}));
   }
 
