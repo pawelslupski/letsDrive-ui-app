@@ -12,6 +12,7 @@ import {AngularFireAuthModule} from "@angular/fire/compat/auth";
 import {CoreRoutingModule} from "./core/core-routing.module";
 import {SharedModule} from "./shared/shared.module";
 import {LayoutService} from "./shared/services/layout.service";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import {LayoutService} from "./shared/services/layout.service";
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AppRoutingModule,

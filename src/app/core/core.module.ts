@@ -8,6 +8,7 @@ import {RouterModule} from "@angular/router";
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SideNavComponent } from './components/layout/side-nav/side-nav.component';
 import {MatRippleModule} from "@angular/material/core";
+import { ShopComponent } from './components/shop/shop.component';
 
 @NgModule({
   imports: [
@@ -17,7 +18,7 @@ import {MatRippleModule} from "@angular/material/core";
     RouterModule,
     MatRippleModule
   ],
-  declarations: [LoginComponent, MainLayoutComponent, DashboardComponent, SideNavComponent],
+  declarations: [LoginComponent, MainLayoutComponent, DashboardComponent, SideNavComponent, ShopComponent],
   exports: [LoginComponent, MainLayoutComponent]
 })
 export class CoreModule { }
