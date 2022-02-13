@@ -1,0 +1,31 @@
+{
+  "cars-all": [
+    {
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2019,
+      "engine": 4.4,
+      "fuel": "petrol",
+      "plateNumber": "KI 107GC",
+      "photoSource": "https://pixabay.com/pl/photos/czarny-samoch%c3%b3d-samoch%c3%b3d-bmw-bmw-x5-6097934"
+    },
+    {
+      "brand": "Porshe",
+      "model": "911 GT3RS",
+      "year": 2021,
+      "engine": 4.0,
+      "fuel": "fuel",
+      "plateNumber": "SK 105MW",
+      "photoSource": "https://pixabay.com/pl/photos/tracker-samoch%c3%b3d-sportowy-porsche-4036203"
+    },
+    {
+      "brand": "Ford",
+      "model": "Mustang Shelby GT500",
+      "year": 2008,
+      "engine": 5.4,
+      "fuel": "fuel",
+      "plateNumber": "LU 7245S",
+      "photoSource": "https://pixabay.com/pl/photos/tracker-samoch%c3%b3d-sportowy-porsche-4036203"
+    }
+  ]
+}

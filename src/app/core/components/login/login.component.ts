@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
 import {Router} from "@angular/router";
 import {MatSnackBar} from "@angular/material/snack-bar";
-import {AuthService} from "../services/auth-service";
-import {LayoutService} from "../../shared/services/layout.service";
+import {AuthService} from "../../services/auth-service";
+import {LayoutService} from "../../../shared/services/layout.service";
 
 @Component({
   selector: 'app-login',

@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
 import firebase from "firebase/compat";
-import {AuthService} from "../../services/auth-service";
+import {AuthService} from "../../../services/auth-service";
 import {Router} from "@angular/router";
-import {LayoutService} from "../../../shared/services/layout.service";
+import {LayoutService} from "../../../../shared/services/layout.service";
 
 @Component({
   selector: 'app-main-layout',
