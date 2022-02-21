@@ -9,6 +9,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SideNavComponent } from './components/layout/side-nav/side-nav.component';
 import {MatRippleModule} from "@angular/material/core";
 import { ShopComponent } from './components/shop/shop.component';
+import {CarSearchCardComponent} from "./components/car-search-card/car-search-card.component";
 
 @NgModule({
   imports: [
@@ -18,7 +19,13 @@ import { ShopComponent } from './components/shop/shop.component';
     RouterModule,
     MatRippleModule
   ],
-  declarations: [LoginComponent, MainLayoutComponent, DashboardComponent, SideNavComponent, ShopComponent],
+  declarations: [
+    LoginComponent,
+    MainLayoutComponent,
+    DashboardComponent,
+    SideNavComponent,
+    ShopComponent,
+    CarSearchCardComponent],
   exports: [LoginComponent, MainLayoutComponent]
 })
 export class CoreModule { }
