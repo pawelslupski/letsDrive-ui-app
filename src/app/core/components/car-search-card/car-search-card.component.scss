@@ -1,29 +1,36 @@
+@import 'src/styles/variables';
+
 .card {
-  width: 300px;
+  width: 330px;
   margin: 15px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.7);
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  border: 1px solid white;
 }
 
-.header {
+.card-header {
   height: 50px;
-  border: 1px solid red;
-  text-transform: uppercase;
   line-height: 50px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #0c4d61;
 }
 
-.checkout {
-  height: 120px;
-  border: 1px solid red;
+.card-content {
+  height: 160px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .license-plate {
   width: 200px;
   height: 35px;
-  background: url(https://images.lteplatform.com/assets/ecp/images/number-input-bg.jpg) no-repeat left top #ffd800;
+  background: url(https://images.lteplatform.com/assets/ecp/images/number-input-bg.jpg) no-repeat left top #70e5d0;
   background-size: contain;
   border: 1px solid #12214e;
   border-radius: 5px;
@@ -34,4 +41,11 @@
   text-transform: uppercase;
   text-align: center;
   outline: none;
+}
+
+.btn {
+  width: 70px;
+  height: 35px;
+  background-color: #20B2AA;
+  color: white;
 }

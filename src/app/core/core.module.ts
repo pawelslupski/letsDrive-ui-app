@@ -10,6 +10,7 @@ import { SideNavComponent } from './components/layout/side-nav/side-nav.componen
 import {MatRippleModule} from "@angular/material/core";
 import { ShopComponent } from './components/shop/shop.component';
 import {CarSearchCardComponent} from "./components/car-search-card/car-search-card.component";
+import { CarCardComponent } from './components/car-card/car-card.component';
 
 @NgModule({
   imports: [
@@ -25,7 +26,9 @@ import {CarSearchCardComponent} from "./components/car-search-card/car-search-ca
     DashboardComponent,
     SideNavComponent,
     ShopComponent,
-    CarSearchCardComponent],
+    CarSearchCardComponent,
+    CarCardComponent
+  ],
   exports: [LoginComponent, MainLayoutComponent]
 })
 export class CoreModule { }
