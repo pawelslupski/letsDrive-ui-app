@@ -6,4 +6,5 @@ export interface Car {
   fuel: string;
   plateNumber: string;
   photoSource: string;
+  key: string;
 }

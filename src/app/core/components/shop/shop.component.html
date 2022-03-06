@@ -1,4 +1,4 @@
 <div class="shop-container">
-      <app-car-search-card></app-car-search-card>
-      <app-car-card></app-car-card>
+  <app-car-search-card (chosenPlateNumber)="findCarByPlateNumber($event)"></app-car-search-card>
+  <app-car-card [car]="searchedCar"></app-car-card>
 </div>

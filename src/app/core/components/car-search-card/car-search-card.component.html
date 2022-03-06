@@ -3,7 +3,7 @@
     Let's find your car
   </div>
   <div class="card-content">
-    <input type="text" name="license-plate" class="license-plate" maxlength="7" placeholder="AB 123CD">
-    <button mat-raised-button class="btn">GO!</button>
+    <input type="text" name="license-plate" class="license-plate" maxlength="8" placeholder="AB 123CD" [(ngModel)]="plateNumber">
+    <button mat-raised-button class="btn" (click)="sendPlateNumber()">GO!</button>
   </div>
 </div>

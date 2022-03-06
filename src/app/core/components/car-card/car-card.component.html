@@ -1,10 +1,15 @@
-<div class="card">
-  <img [src]="car?.photoSource"/>
-  <div class="info-box">
+<div class="card" [ngClass]="{'card-flip': flipCard}">
+  <img [src]="car?.photoSource ? car?.photoSource : '../../../../assets/img/cars/car_icon_145832.png'" [ngClass]="{'no-car-img': !car}"/>
+  <div *ngIf="car ; else noCar" class="info-box">
     <p>Company: {{car?.brand}}</p>
     <p>Model: {{car?.model}}</p>
     <p>Engine: {{car?.engine}}</p>
     <p>Fuel: {{car?.fuel}}</p>
     <p>Plate number: {{car?.plateNumber}}</p>
   </div>
+  <ng-template #noCar>
+    <div class="no-car-info-box">
+      <p class="no-car-info">No car data found!</p>
+    </div>
+  </ng-template>
 </div>

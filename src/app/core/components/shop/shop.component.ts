@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {CarsService} from "../../services/cars.service";
 import {Car} from "../../models/car.interface";
 import {Destroyable} from "../destroyable";
-import {takeUntil} from "rxjs";
+import {map, takeUntil} from "rxjs";
 
 @Component({
   selector: 'app-shop',
@@ -11,6 +11,8 @@ import {takeUntil} from "rxjs";
 })
 export class ShopComponent extends Destroyable implements OnInit {
   private cars: Car[] | undefined;
+  searchedCar: Car | undefined;
+  plateNumber: string | undefined;
 
   constructor(private carsService: CarsService) {
     super();
@@ -28,5 +30,12 @@ export class ShopComponent extends Destroyable implements OnInit {
       .subscribe((cars: Car[]) => {
         this.cars = cars
       });
+  }
+
+  findCarByPlateNumber(plateNumber: string) {
+    return this.carsService.fetchAllCars()
+      .pipe(
+        map((cars: Car[]) => cars.find((car: Car) => car.plateNumber === plateNumber))
+      ).subscribe(car => this.searchedCar = car);
   }
 }

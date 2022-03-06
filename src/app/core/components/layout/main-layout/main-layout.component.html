@@ -2,7 +2,7 @@
   <mat-toolbar class="toolbar">
     <div class="container">
       <mat-icon class="logout-icon" (click)="logout()">power_settings_new</mat-icon>
-      <span class="user-login">Hello, {{user?.email}}!</span>
+      <span class="user-login">Hello, {{user?.email ? user?.email : 'John Doe'}}!</span>
     </div>
   </mat-toolbar>
   <mat-sidenav-container>
